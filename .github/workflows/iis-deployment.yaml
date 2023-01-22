@@ -53,8 +53,8 @@ jobs:
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
-        with:
-          name: output-${{github.run_number}}
+        # with:
+        #   name: output-${{github.run_number}}
 
       - name: Deploy the Build to IIS Server
         uses: mdallasanta/ssh-scp-deploy@v1.2.0
