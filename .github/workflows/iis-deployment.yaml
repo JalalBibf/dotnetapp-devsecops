@@ -1,7 +1,7 @@
 name: Build and deploy ASP.Net Core app to an Azure Server
 
 env:
-  DOTNET_VERSION: '7.0.*'                 # set this to the .NET Core version to use
+  DOTNET_VERSION: '6.0.13'                 # set this to the .NET Core version to use
 
 on:
   push:
@@ -35,13 +35,13 @@ jobs:
       #   run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -o ${{env.DOTNET_ROOT}}/output
+        run: dotnet publish -o /output
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: output-${{github.run_number}}
-          path: ${{env.DOTNET_ROOT}}/output/*
+          path: output/*
 
   deploy:
     name: Deploy application to server
@@ -59,7 +59,7 @@ jobs:
       - name: Deploy the Build to IIS Server
         uses: mdallasanta/ssh-scp-deploy@v1.2.0
         with:
-          local: output-${{github.run_number}}                                           
+          local: output-${{github.run_number}}\*                                           
           remote: 'C:\inetpub\wwwroot\'                                               
           host: ${{secrets.HOST}}                                  
           port: ${{secrets.PORT}}
