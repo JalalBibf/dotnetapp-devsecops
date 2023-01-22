@@ -40,7 +40,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: .net-app
+          name: output
           path: ${{env.DOTNET_ROOT}}/output
 
   deploy:
@@ -54,12 +54,12 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: .net-app
+          name: output
 
       - name: Deploy the Build to IIS Server
         uses: mdallasanta/ssh-scp-deploy@v1.2.0
         with:
-          local: .net-app                                            
+          local: output                                           
           remote: 'C:\inetpub\wwwroot\'                                               
           host: ${{secrets.HOST}}                                  
           port: ${{secrets.PORT}}
