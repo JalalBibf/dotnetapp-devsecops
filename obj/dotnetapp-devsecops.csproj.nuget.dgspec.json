@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj": {}
+    "c:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj": {}
   },
   "projects": {
-    "C:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj": {
+    "c:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj",
+        "projectUniqueName": "c:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj",
         "projectName": "dotnetapp-devsecops",
-        "projectPath": "C:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj",
+        "projectPath": "c:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj",
         "packagesPath": "C:\\Users\\603-23\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\obj\\",
+        "outputPath": "c:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\603-23\\AppData\\Roaming\\NuGet\\NuGet.Config"

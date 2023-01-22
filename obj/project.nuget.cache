@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uyPkm0R+RylBeiaaIcavfFKhzPgux59s2AROJNIirSpJasYOS74IXc/VRMnYv0/wVifMvnH9UAXqJjtT1tA14Q==",
+  "dgSpecHash": "URF/mv6RHgbGgMtu7kGvyEqu+9TbRd8M+W4vqsq8pZIs+3fkBe/pH6Q++TcO3VV+usb7t3XvxReHAJl40LzeKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj",
+  "projectFilePath": "c:\\Users\\603-23\\Desktop\\jworkspace\\dotnetproject\\dotnetapp-devsecops\\dotnetapp-devsecops.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
