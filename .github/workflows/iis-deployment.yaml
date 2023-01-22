@@ -66,7 +66,7 @@ jobs:
           port: ${{secrets.PORT}}
           user: ${{secrets.USER}}
           password: ${{secrets.PASSWORD}}
-          pre_upload: rmdir /s /q output
+          # pre_upload: rmdir /s /q output
           post_upload: iisreset /stop && xcopy /s /y output C:/inetpub/wwwroot/ && iisreset /start
           ssh_options: -o StrictHostKeyChecking=no
           scp_options: -v
