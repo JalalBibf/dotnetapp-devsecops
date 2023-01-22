@@ -61,7 +61,7 @@ jobs:
         uses: mdallasanta/ssh-scp-deploy@v1.2.0
         with:
           local: output-${{github.run_number}}/*                                          
-          remote: 'output/'                                               
+          remote: 'C:/inetpub/wwwroot/'                                               
           host: ${{secrets.HOST}}                                  
           port: ${{secrets.PORT}}
           user: ${{secrets.USER}}
