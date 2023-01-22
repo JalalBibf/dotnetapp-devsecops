@@ -53,20 +53,21 @@ jobs:
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
-        # with:
-        #   name: output-${{github.run_number}}
+        with:
+          name: output-${{github.run_number}}
+          path: output
 
       - name: Deploy the Build to IIS Server
         uses: mdallasanta/ssh-scp-deploy@v1.2.0
         with:
           local: output-${{github.run_number}}/*                                           
-          remote: 'C:/inetpub/wwwroot/'                                               
+          remote: 'output/'                                               
           host: ${{secrets.HOST}}                                  
           port: ${{secrets.PORT}}
           user: ${{secrets.USER}}
           password: ${{secrets.PASSWORD}}
-          # pre_upload: echo "This will be executed before the upload!"
-          # post_upload: echo "executed after the upload!"
+          pre_upload: rmdir /s /q output
+          post_upload: iisreset /stop && xcopy /s /y output C:/inetpub/wwwroot/ && iisreset /start
           ssh_options: -o StrictHostKeyChecking=no
           scp_options: -v
 
