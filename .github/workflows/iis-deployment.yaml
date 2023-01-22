@@ -35,13 +35,13 @@ jobs:
       #   run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -o /output
+        run: dotnet publish -o ${{env.DOTNET_ROOT}}/output
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: output-${{github.run_number}}
-          path: output/*
+          path: ${{env.DOTNET_ROOT}}/output/*
 
   deploy:
     name: Deploy application to server
