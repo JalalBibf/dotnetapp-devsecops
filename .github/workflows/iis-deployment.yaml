@@ -4,8 +4,8 @@ env:
   DOTNET_VERSION: '7.0.102'                 # set this to the .NET Core version to use
 
 on:
-  push:
-    branches: [ "master" ]
+#   push:
+#     branches: [ "master" ]
   workflow_dispatch:
 
 permissions:
